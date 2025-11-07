@@ -10,6 +10,16 @@ The script compiles an encrypted function that adds two numbers without ever dec
    pip install concrete  
 3. Add the files `app.py` and `README.md` to your repository.
 
+## Run with Docker
+To run this project in a Docker container:
+
+1. Build the image:
+   docker build -t zama-fhe-demo .
+
+2. Run the container:
+   docker run --rm zama-fhe-demo
+
+
 ## Usage
 Run the script with:  
 python app.py  
