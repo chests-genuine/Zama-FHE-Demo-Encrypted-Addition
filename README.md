@@ -11,20 +11,28 @@ The script compiles an encrypted function that adds two numbers without ever dec
 3. Add the files `app.py` and `README.md` to your repository.
 
 ## Usage
-Run the script with:  
+Run with default values:  
 python app.py  
 
-The script will:
-- Compile an encrypted addition circuit.
-- Perform an encrypted computation (`x + y`) using FHE.
-- Decrypt and display the result securely.
+Provide custom encrypted inputs:  
+python app.py --x 15 --y 8  
 
-## Expected Output
-If successful, you will see output similar to:  
-✅ FHE circuit compiled successfully with Zama Concrete.  
-🔒 Encrypted addition result: 12 + 4 = 16  
+Provide a list of numbers for encrypted list summation:  
+python app.py --list 1 2 3 4 5  
+
+You can also combine both operations:  
+python app.py --x 5 --y 9 --list 2 4 6 8 
+
+## Expected Result
+When running with --x 5 --y 9, you will see:  
+✅ FHE circuits compiled successfully with Zama Concrete.  
+🔒 Encrypted addition result: 5 + 9 = 14  
+
+When running with --list 2 4 6 8, you will see:  
+✅ FHE circuits compiled successfully with Zama Concrete.  
+🧮 Encrypted list sum result: [2, 4, 6, 8] → 20
 
 ## Notes
-- The example shows the essence of privacy-preserving computation — the data remains encrypted throughout processing.  
-- You can modify the function to implement subtraction, multiplication, or more complex operations.  
-- Zama’s FHE technology enables secure computations in fields like AI, blockchain privacy, and confidential data analytics.
+• All computations are performed using Fully Homomorphic Encryption (FHE) via Zama’s Concrete framework.  
+• Results are decrypted only after encrypted evaluation is complete.  
+• You can use this example as a minimal template for building secure, privacy-preserving arithmetic pipelines. 
