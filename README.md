@@ -7,8 +7,8 @@ The script compiles an encrypted function that adds two numbers without ever dec
 ## Installation
 1. Make sure **Python 3.9+** is installed.  
 2. Install Zama’s Concrete library:  
-   pip install concrete  
-3. Add the files `app.py` and `README.md` to your repository.
+   pip install -r requirements.txt  
+4. Add the files `app.py` and `README.md` to your repository.
 
 ## Usage
 Run the script with:  
